@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Crash Course Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.svg" alt="26andfour logo" class="logo">
+
+            <nav> <!-- everything comprising a navigation -->      
+           <!-- the "a" tag makes something clickable. these are the tags fo the "hamburger" toggle on the phone view-->
+                <a href="#" class="hide-desktop">
+                     <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                 <!-- if you have multiple unordered lists in an HTML, you have to give it a class to differentiate them. if you only have one, no class needed -->
+                <ul class="show-desktop hide-mobile" id="nav"> 
+                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
+                    <li><a href="#">home</a> </li>
+                    <li><a href="#">services</a> </li>
+                    <li><a href="#">about</a> </li>
+                    <li><a href="#">enter</a> </li>
+                 </ul>
+            </nav>
+        </header>
+        <!-- defines the first section of a document-->
+        <section>
+            <img src="images/server.svg" alt="server graphic" class="server">
+            <!--headings-->
+            <h1>Web Hosting for the Modern Era </h1>
+            <p class="subhead">Go serverless and pay only for what you use</p>
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+        </section>
+    </div>
+
+    <div class="blue-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/icon-1.svg" alt="calendar icon">
+                    <p>Click here for the dates of our upcoming webinars. you dont want to miss them!</p>
+                </li>
+                <li>
+                    <img src="images/icon-2.svg" alt="calendar icon">
+                    <p>Get access to all of our invetory at any time once you become a member</p>
+                </li>
+                <li>
+                    <img src="images/icon-3.svg" alt="calendar icon">
+                    <p>Call any of our representatives for assistance with your booking</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gray-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/user1.png" alt="user testimonial images">
+                        <blockquote>I really loved this service, would definitely recommend</blockquote>
+                        <figcaption>- Jenna Jones</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/user2.png" alt="user testimonial images">
+                        <blockquote>This took my web hosting skills to the next level!</blockquote>
+                        <figcaption>- Tommy Turtle</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div> 
+
+    <div class= "container">
+        <h2>Start your free trial now!</h2>
+        <a href="#" class="cta">Get Started</a>
+    </div>
+    <footer>
+        <div class= "footer-container">
+            <div class= "container">
+                <a href="#">
+                    <img src="images/logo-white.svg" alt="logo" class="logo">
+                </a>
+                <p class="address">Melrose Place 91210<br>USA</p>
+                <UL class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </UL>
+            </div>
+         </div>
+    </footer>
+
+
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav')
+        var exit = document.getElementById('exit')
+        
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+</body>
+</html>
